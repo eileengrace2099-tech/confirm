@@ -1,71 +1,103 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="zh-Hant">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2299.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
-    span.s1 {font-kerning: none}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>商品防偽驗證</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    body {font-family:'Inter','Microsoft JhengHei',Arial,sans-serif;background:#f7f8fa;}
+    .container {max-width:420px;margin:50px auto;background:#fff;border-radius:18px;box-shadow:0 2px 32px rgba(92,99,105,0.07);padding:36px 30px;}
+    h1 {margin-bottom:6px;font-size:2rem;color:#4657e1;letter-spacing:2px;font-weight:700;text-align:center;}
+    p {margin-top:0;color:#6a6f84;text-align:center;font-size:1rem;}
+    .form-group {margin:35px 0 20px;}
+    input[type="text"] {width:100%;padding:13px;border-radius:10px;border:1.5px solid #dbdef4;margin-bottom:18px;font-size:1.15rem;background:#f1f4fd;letter-spacing:1px;box-sizing:border-box;}
+    .btn {background:linear-gradient(120deg,#4657e1 30%, #5d83ef 100%);color:#fff;border:none;padding:13px 0;border-radius:9px;font-size:1.15rem;width:100%;font-weight:700;cursor:pointer;letter-spacing:2px;box-shadow:0 2px 12px rgba(70,87,225,0.07);}
+    .result-box {display:none;margin:20px 0 0 0;padding:16px;border-radius:10px;font-size:1.09rem;text-align:center;background:#f1f8fd;color:#2a625a;border:1.5px solid #dae9f0;}
+    .result-box.success {color:#215f3b;background:#e3faec;border-color:#bee7cd;}
+    .result-box.failed {color:#b9383d;background:#fde1e3;border-color:#f5c6c9;}
+    .result-box.repeat {color:#875b0e;background:#faf1e3;border-color:#f3e0bc;}
+    .meta-box {margin-top:24px;padding:17px 13px;font-size:0.99rem;background:#f7f9ff;border-radius:10px;}
+    .meta-title {font-weight:bold;margin-bottom:6px;}
+    .meta-list {padding-left:19px;margin:0;}
+    .contact {margin-top:18px;text-align:center;}
+    .contact span {display:block;margin-bottom:3px;}
+    @media (max-width:460px) {.container {padding:27px 5vw;}h1{font-size:1.3rem;}}
   </style>
 </head>
 <body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
-<p class="p1"><span class="s1">&lt;html lang="zh-Hant"&gt;</span></p>
-<p class="p1"><span class="s1">&lt;head&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;title&gt;商品防偽驗證&lt;/title&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&amp;display=swap" rel="stylesheet"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;style&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>body {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-family: 'Inter', 'Microsoft JhengHei', Arial, sans-serif;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: #f7f8fa;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin: 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #21243d;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.container {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>max-width: 420px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin: 50px auto;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: #fff;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 18px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>box-shadow: 0 2px 32px rgba(92,99,105,0.07);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 36px 30px 30px 30px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>h1 {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-bottom: 6px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 2rem;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #4657e1;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>letter-spacing: 2px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-weight: 700;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>text-align: center;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>p {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-top: 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #6a6f84;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>text-align: center;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 1rem;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.form-group {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin: 35px 0 20px 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>input[type="text"] {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>width: 100%;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 13px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 10px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border: 1.5px solid #dbdef4;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-bottom: 18px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 1.15rem;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: #f1f4fd;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>letter-spacing: 1px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>box-sizing: border-box;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.btn {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: linear-gradient(120deg,#4657e1 30%, #5d83ef 100%);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #fff;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border: none</span></p>
+  <div class="container">
+    <h1>商品防偽驗證</h1>
+    <p>請輸入您的防偽認證碼以查詢產品真偽</p>
+    <form id="verifyForm" autocomplete="off">
+      <div class="form-group">
+        <input type="text" id="codeInput" maxlength="24" placeholder="請輸入防偽認證碼" required />
+        <button class="btn" type="submit">查詢</button>
+      </div>
+    </form>
+    <div id="result" class="result-box"></div>
+    <div class="meta-box">
+      <div class="meta-title">🔔 注意事項</div>
+        <ul class="meta-list">
+          <li>每組防偽碼僅限查詢一次，請妥善保管</li>
+          <li>如有疑問請聯繫下方客服</li>
+          <li>防偽碼請勿提供給他人避免被冒用</li>
+          <li>收到商品請立即查驗</li>
+        </ul>
+    </div>
+    <div class="meta-box contact">
+      <div class="meta-title">聯絡資訊</div>
+      <span>📞 客服專線：+886 29990000</span>
+      <span>📧 客服信箱：service@eileengrace.com.tw</span>
+      <span>⏰ 服務時間：週一至週五 09:00-17:00</span>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/js-md5@0.7.3/build/md5.min.js"></script>
+  <script>
+    const fwkey = 'f1c72E7oMl6bwuEJi8C1EnQXn0sTnBJ3woRnX5tOVA2';
+    const fwsecret = '149110a73596234ce67a1c220a43d81a2fc815f2e733daa5d4247abcd8731d0d';
+    function getClientIP() {
+      return fetch('https://api.ipify.org?format=json')
+        .then(res=>res.json())
+        .then(data=>data.ip)
+        .catch(()=> '');
+    }
+    document.getElementById('verifyForm').onsubmit = async function(e){
+      e.preventDefault();
+      let code = document.getElementById('codeInput').value.trim();
+      let resultBox = document.getElementById('result');
+      if(!code){ resultBox.style.display='none'; return; }
+      let timestamp = Math.floor(Date.now()/1000).toString();
+      let ip = await getClientIP();
+      let signatureStr = fwkey + code + timestamp + fwsecret;
+      let signature = md5(signatureStr);
+      let params = {
+        fwkey: fwkey,
+        ip: ip,
+        fwcode: code,
+        signature: signature,
+        timestamp: timestamp
+      };
+      let url = 'http://www.cn315fw.com/fwapi/Getres?' +
+        Object.keys(params).map(k=>k+'='+encodeURIComponent(params[k])).join('&');
+      fetch(url)
+        .then(res => res.json())
+        .then(data => {
+          let text = '';
+          let tclass = '';
+          if(data.status === 1)      { text = '正品，初次驗證通過'; tclass = 'success'; }
+          else if(data.status === 2) { text = '該防偽碼已被查詢過'; tclass = 'repeat'; }
+          else                      { text = '防偽碼輸入錯誤，請檢查重新輸入'; tclass = 'failed'; }
+          resultBox.textContent = text;
+          resultBox.className='result-box '+tclass;
+          resultBox.style.display='block';
+        })
+        .catch(err => {
+          resultBox.textContent = '查詢失敗，請稍後再試';
+          resultBox.className='result-box failed';
+          resultBox.style.display='block';
+        });
+    };
+  </script>
 </body>
 </html>
